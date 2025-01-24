@@ -1,4 +1,4 @@
-package tema33;
+package ejercicioslistas;
 
 import java.util.Scanner;
 import java.util.TreeSet;

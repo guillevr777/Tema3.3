@@ -1,4 +1,4 @@
-package tema33;
+package ejercicioslistas;
 
 import java.lang.foreign.AddressLayout;
 import java.util.HashMap;
