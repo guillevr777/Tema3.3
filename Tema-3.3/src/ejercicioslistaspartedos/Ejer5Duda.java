@@ -30,13 +30,14 @@ public class Ejer5Duda {
 		
 			//creamos un menu para que el usuario elija la opcion que quiera ejecutar
 			switch (opcion) {
-				
-			case 1 -> {
-				serie = "";
-				System.out.println("Que pelicula te gustaria añadir a la lista \"Los nombres con letra y las puntuaciones de valoracion con numeros\":\n");
-				serie = reader.nextLine().replaceAll(" ", "");
-				series.put(serie, reader.nextInt());
-				reader.next();
+
+			//Preguntar dudas sobre buffer 
+//			case 1 -> {
+//				serie = "";
+//				System.out.println("Que pelicula te gustaria añadir a la lista \"Los nombres con letra y las puntuaciones de valoracion con numeros\":\n");
+//				serie = reader.nextLine().replaceAll(" ", "");
+//				series.put(serie, reader.nextInt());
+//				reader.next();
 			}
 			case 2 -> {
 				System.out.println("Que pelicula quieres buscar en la lista?\n");
