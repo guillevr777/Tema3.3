@@ -27,17 +27,17 @@ public class Ejer5Duda {
 			//preguntamos al usuario por la opcion que quiere elegir
 			System.out.println("Dime que quieres hacer :\n1. Agregar serie.\n2. Buscar serie.\n3. Eliminar serie.\n4. Salir.\n");
 			opcion = reader.nextInt();
-		
+			 reader.nextLine();
 			//creamos un menu para que el usuario elija la opcion que quiera ejecutar
 			switch (opcion) {
 
 			//Preguntar dudas sobre buffer 
-//			case 1 -> {
-//				serie = "";
-//				System.out.println("Que pelicula te gustaria añadir a la lista \"Los nombres con letra y las puntuaciones de valoracion con numeros\":\n");
-//				serie = reader.nextLine().replaceAll(" ", "");
-//				series.put(serie, reader.nextInt());
-//				reader.next();
+			case 1 -> {
+				serie = "";
+				System.out.println("Que pelicula te gustaria añadir a la lista \"Los nombres con letra y las puntuaciones de valoracion con numeros\":\n");
+				serie = reader.nextLine().replaceAll(" ", "");
+				series.put(serie, reader.nextInt());
+				reader.nextLine();
 			}
 			case 2 -> {
 				System.out.println("Que pelicula quieres buscar en la lista?\n");
