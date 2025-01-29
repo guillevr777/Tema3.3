@@ -2,9 +2,9 @@ package ejercicioslistaspartedos;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Ejer6 {
 
@@ -15,6 +15,9 @@ public class Ejer6 {
 		
 		//Usamos una coleecion de tipo HashMap
 		HashMap<String, Set<Integer>> numeros = new HashMap<>();
+		
+		//creamos un set 
+		HashSet numero = new HashSet();
 
 		//creamos una variable de tipi int para elegir la opcion del menu
 		int opcion = 0;
@@ -25,6 +28,15 @@ public class Ejer6 {
 		//donde se guardaran los conteactos ttemporalmente
 		int telefono;
 		
+		//guardamos el booleano salir
+		boolean salir = false;
+		
+		//creamos un while para recorer varias iteraciones
+		while (!salir) {
+			
+			System.out.println("Que opcion quieres elegir ?\n1.Añadir persona\n2.Añadir telefono\n3.Preguntamos por telefono\n4.Eliminar telefono\n5.Eliminar persona\n6.Salir");
+			opcion = reader.nextInt();
+			
 		//Creamos el switch para elegir la opcion
 		switch (opcion) {
 		//codigo encargado de añadir nombres a la lista
@@ -44,6 +56,7 @@ public class Ejer6 {
 			
 			//si contiene dicho nombre le puede añadir el numeor
 			if (numeros.containsKey(nombre)) {
+				numeros.putIfAbsent(nombre, new TreeSet<>());
 				numeros.get(nombre).add(telefono);
 			} else {
 				System.out.println("No se ha encontrado dicho nombre en la lista.");
@@ -89,6 +102,11 @@ public class Ejer6 {
 			} else {
 				System.out.println("No existe dicho nombre en la lista.");
 			}
+		}
+		default -> {
+			System.out.println("Has finalizado la sesion.");
+			salir = true;
+		}
 		}
 		}
 		//cerramos el escaner
