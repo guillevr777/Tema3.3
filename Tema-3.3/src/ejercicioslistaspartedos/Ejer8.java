@@ -50,6 +50,9 @@ public class Ejer8 {
 						if (categorias.containsKey(categoria)) {
 							categorias.get(categoria).add(tarea);
 						} else {
+							//vaciamos el HashSet para asegurarnos de no introducir valores no correspondientes
+							tareas.clear();
+							
 							//añadimos la tareas al HashSet tareas
 							tareas.add(tarea);
 							
